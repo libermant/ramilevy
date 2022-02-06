@@ -1,8 +1,9 @@
 import Categories from "./Categories";
 import Header from "./Header";
+import Nav from "./Nav";
 
 
-categoriesArray=[
+const categoriesArray=[
   {Bread:[
     {
       name:'Sliced ​​uniform bread', price:'6.5 ₪', description:'Angel Uniform sliced ​​bread without added sugar 750 grams', image:'Sliced ​​uniform bread.png'
@@ -100,8 +101,21 @@ categoriesArray=[
       name:'Pretzel with chocolate', price:'7.90 ₪', description:'Flat pretzel chocolate coated with dark chocolate 80 g', image:'Pretzel with chocolate.png'
     },
   ]}
+]
 
-
+const navArray = [
+  {
+    name: "Bread",
+    img: "bread.png"
+  },
+  {
+    name: "DairyProducts",
+    img: 'milky.png'
+  },
+  {
+    name: "Sweets",
+    img: "toffee.png"
+  }
 ]
 
 
@@ -109,15 +123,24 @@ categoriesArray=[
 function App() {
   return (
     <div >
-      <Header/>
-      {categoriesArray.map((el)=>
-        el.elCategirya.map((EL,i)=>
-        <Categories key={i} name={el.name} description={el.description} price={el.price} image={el.image}/>
-
-        )
-      )}
+      <Header/>      
+      <div id="nav">        
+        {navArray.map((nav,i)=>      
+          <Nav key={i} navy={nav.name} image={nav.img}/>        
+        )}
+      </div>
+      <div id="category">
+        {categoriesArray.map((cat,i)=>
+         //cat.Bread.map((c,i)=>
+            //<Categories key={i} name={[cat]} />
+            console.log(cat) 
+         //)  
+               
+       )
+        }
+      </div>
     </div>
-  );
+  )
 }
 
 export default App;
