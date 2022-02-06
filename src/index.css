@@ -1,18 +1,21 @@
 @keyframes header {
   0%{color: blue;}
-  25%{color: #424264;}
+  25%{color: #143a0f;}
   50%{color: #53197a;}
   75%{color: #911380;}
   100%{color: #ac1a39;}
 }
+
 header{
   background-color: coral;
-  height: 250px;
+  height: 200px;
   font: italic 900 150px fantasy;
   color: blue;
   text-align: center;
-  padding-top: 60px;
-  animation: 2s header style;
+  animation-duration: 3s;
+  animation-name: header;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 } 
 #nav{
   width: 95%;
@@ -27,9 +30,17 @@ header{
   font-size: 50px;
   display:inline;
   padding: 0px 20px;
-  margin: 0 15px 10px 20px;
+ margin: 0 20px;
+}
+#buy img{
+  width: 130px;
+  border: red 5px solid;
+  margin-top: 20px;
+  padding: 10px;
+  
 }
 img{
   width: 70px;
 }
+
 

@@ -1,6 +1,7 @@
 import Categories from "./Categories";
 import Header from "./Header";
 import Nav from "./Nav";
+import ShoppingCart from "./ShoppingCart";
 
 
 const categoriesArray=[
@@ -138,7 +139,8 @@ function App() {
                
        )
         }
-      </div>
+      </div>      
+        <ShoppingCart buy="buy.png"/>     
     </div>
   )
 }
