@@ -5,7 +5,12 @@ import ShoppingCart from "./ShoppingCart";
 
 
 const categoriesArray=[
-  {Bread:[
+
+  {
+    /*title:Bread*,*/
+    bread:true,
+    sweets:false,
+    products:[
     {
       name:'Sliced ​​uniform bread', price:'6.5 ₪', description:'Angel Uniform sliced ​​bread without added sugar 750 grams', image:'Sliced ​​uniform bread.png'
     },
@@ -38,9 +43,13 @@ const categoriesArray=[
     },
     
   ]},
-  {DairyProducts:[
+  {
+    /*title:DairyProducts ,*/
+    bread:false,
+    sweets:false,
+    products:[
     {
-      name:'Natural milk', price:'7.50 ₪', description:'Natural Yotvata milk 1 liter bottle 3.6%', image:'Natural milk.png'
+      name:'Natural milk', price:'7.50 ₪', description:'Natural Yotvata milk 1 liter bottle 3.6%', image:'Natural milk.png',
     },
     {
       name:'Fortified milk', price:'7.50 ₪', description:'Yotvata milk enriched with calcium and vitamin D 1 liter bottle 1%', image:'Fortified milk.png'
@@ -70,7 +79,11 @@ const categoriesArray=[
       name:'Yolo', price:'12.70 ₪', description:'YOLO Milk drink with classic chocolate 1 liter', image:'Yolo.png'
     },
   ]},
-  {Sweets:[
+  {
+    /*title:Sweets ,*/
+    bread:false,
+    sweets:true,
+    products:[
     {
       name:'Bonbonnieres', price:'20.60 ₪', description:'Mercy Bonbonniere 250 g chocolate candy selection', image:'Bonbonnieres.png'
     },
@@ -119,30 +132,20 @@ const navArray = [
   }
 ]
 
-
-
 function App() {
   return (
     <div >
       <Header/>      
-      <div id="nav">        
+     <div id="nav">        
         {navArray.map((nav,i)=>      
           <Nav key={i} navy={nav.name} image={nav.img}/>        
         )}
-      </div>
-      <div id="category">
-        {categoriesArray.map((cat,i)=>
-         //cat.Bread.map((c,i)=>
-            //<Categories key={i} name={[cat]} />
-            console.log(cat) 
-         //)  
-               
-       )
-        }
-      </div>      
-        <ShoppingCart buy="buy.png"/>     
+      </div> 
+      <Categories categorya={categoriesArray}/>    
+        <ShoppingCart buy="buy.png"/>
+             
     </div>
-  )
-}
+        )
+      }
 
 export default App;

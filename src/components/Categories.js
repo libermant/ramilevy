@@ -1,12 +1,13 @@
 import React from 'react';
+import DairyProducts from './DairyProducts';
 
-const Categories = ({name,description,price,image}) => {
+
+const Categories = ({categorya}) => {
   return (
     <div>
-        <h1>{name}</h1>
-        <h3>{description}</h3>
-        <h4>{price}</h4>
-        <img src={image}/>
+       {categorya.map((milk,i)=>
+        <DairyProducts key={i} milk={milk}/>
+        )} 
     </div>
     );
 };
