@@ -1,27 +1,15 @@
 import React from 'react'
-import Bread from './Bread'
-import Sweets from './Sweets'
 
 
-const DairyProducts = ({categorya}) => {
+
+const DairyProducts = ({dairyProducts}) => {
   return (
-    <div className='partA'>
-       <h3>{categorya.title}</h3>
-       {categorya.bread?
-            categorya.products.map((pro,i)=>
-                <Bread key={i} pro={pro}/>)
-            :<div className='partB'>
-                {!categorya.sweets?
-                    <div></div>
-                    :categorya.products.map((pro,i)=>
-                        <Sweets key={i} pro={pro}/>
-                    )
-                }
-            </div>    
-            
-       }  
-        
-    </div>
+    <div className='products'>        
+      <h4 className='name'>{dairyProducts.name}</h4>
+      <div>{dairyProducts.description}</div>
+      <div>{dairyProducts.price}</div> 
+      <img src={dairyProducts.image}/>
+   </div>
   )
 }
 

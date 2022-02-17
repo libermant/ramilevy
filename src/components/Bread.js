@@ -1,15 +1,12 @@
 import React from 'react'
 
-const Bread = ({pro}) => {
+const Bread = ({bread}) => {
   return (
-    <div className='partC'>
-        <div className='product'>
-            <h4 className='name'>{pro.name}</h4>
-            <div>{pro.description}</div>
-            <div>{pro.price}</div> 
-            <img src={pro.image}/>   
-        </div>
-
+    <div className='products'>        
+      <h4 className='name'>{bread.name}</h4>
+      <div>{bread.description}</div>
+      <div>{bread.price}</div> 
+      <img src={bread.image}/>
     </div>
   )
 }

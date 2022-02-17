@@ -7,10 +7,10 @@ import ShoppingCart from "./ShoppingCart";
 const categoriesArray=[
 
   {
-    /*title:Bread*,*/
+    title:"Bread",
     bread:true,
     sweets:false,
-    products:[
+    productsB:[
     {
       name:'Sliced ​​uniform bread', price:'6.5 ₪', description:'Angel Uniform sliced ​​bread without added sugar 750 grams', image:'Sliced ​​uniform bread.png'
     },
@@ -44,10 +44,10 @@ const categoriesArray=[
     
   ]},
   {
-    /*title:DairyProducts ,*/
+    title:"DairyProducts" ,
     bread:false,
     sweets:false,
-    products:[
+    productsD:[
     {
       name:'Natural milk', price:'7.50 ₪', description:'Natural Yotvata milk 1 liter bottle 3.6%', image:'Natural milk.png',
     },
@@ -80,10 +80,10 @@ const categoriesArray=[
     },
   ]},
   {
-    /*title:Sweets ,*/
+    title:"Sweets" ,
     bread:false,
     sweets:true,
-    products:[
+    productsS:[
     {
       name:'Bonbonnieres', price:'20.60 ₪', description:'Mercy Bonbonniere 250 g chocolate candy selection', image:'Bonbonnieres.png'
     },

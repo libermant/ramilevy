@@ -1,12 +1,12 @@
 import React from 'react';
-import DairyProducts from './DairyProducts';
+import CategoriesOther from './CategoriesOther';
 
 
 const Categories = ({categorya}) => {
   return (
     <div>
-       {categorya.map((milk,i)=>
-        <DairyProducts key={i} milk={milk}/>
+       {categorya.map((cat,i)=>
+        <CategoriesOther key={i} cat={cat}/>
         )} 
     </div>
     );

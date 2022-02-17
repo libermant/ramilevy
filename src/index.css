@@ -18,7 +18,7 @@ header{
   animation-direction: alternate;
 } 
 #nav{
-  width: 95%;
+  width: 100%;
   margin: auto;
 }
 .nav{
@@ -41,6 +41,14 @@ header{
 }
 img{
   width: 70px;
+}
+.products{
+  border: blue 5px solid;
+  width: 150px;
+  margin: 5px;
+}
+.name{
+  color: #121233;
 }
 
 
